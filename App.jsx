@@ -12,9 +12,10 @@ export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
 
   const addItem = (item) => {
-    if (item !== "") {
+    if (item.value !== "") {
       setItemList([...itemList, item]);
     }
+    return
   };
 
   const openModal = (item, e) => {
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#00FFFF",
   },
   container: {
+    flex: 1,
     marginTop: 100,
     width:'90%',
     justifyContent: 'center'
